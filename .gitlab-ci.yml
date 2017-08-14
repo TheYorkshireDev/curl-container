@@ -42,7 +42,7 @@ test_installed_apps:
 
 # Lint our Dockerfile
 lint_dockerfile:
-  image: theyorkshiredev/docker-dockerlint:latest
+  image: theyorkshiredev/dockerfile-linter:latest
   stage: test
   script:
     - dockerfilelint Dockerfile
@@ -69,9 +69,9 @@ publish:
   only:
     - tags
 
-# If the publish to github completed release the image on dockerhub
+# If the publish to github completed, release the image on dockerhub
 dockerhub_release:
-  image: theyorkshiredev/docker-triggerhub:latest #TODO: Update Image
+  image: theyorkshiredev/trigger-dockerhub-build:latest
   stage: release
   script:
     - echo "Release to Dockerhub."
