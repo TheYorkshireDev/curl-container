@@ -1,6 +1,6 @@
 # Curl Container
 
-A small alpine linux container with curl installed.
+A small alpine linux container with curl v7.56.0 installed.
 
 ## Build & Release Status
 
